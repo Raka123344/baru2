@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Kue Online</title>
+    <link rel="stylesheet" href="baru2.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Toko Kue Online",
+        "url": "http://www.tokokueonline.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://www.tokokueonline.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "Product",
+                    "name": "Kue Coklat",
+                    "image": "https://media.istockphoto.com/id/1326149453/id/foto/irisan-kue-cokelat-hitam.jpg?s=612x612&w=0&k=20&c=XoIR1UiGfjB7Z6YJFFhe063nGg9YoaWLCCSqHQoSwB4=",
+                    "description": "Kue Coklat yang lezat dan manis.",
+                    "offers": {
+                        "@type": "Offer",
+                        "priceCurrency": "IDR",
+                        "price": "50000",
+                        "itemCondition": "https://schema.org/NewCondition",
+                        "availability": "https://schema.org/InStock"
+                    }
+                },
+                {
+                    "@type": "Product",
+                    "name": "Kue Keju",
+                    "image": "https://media.istockphoto.com/id/1364933651/id/foto/cheesecake-klasik.jpg?s=612x612&w=0&k=20&c=_kEGihrxC3MflUyMSty4UkglJhEABxpiwvMt10m3-cQ=",
+                    "description": "Kue Keju yang creamy dan lezat.",
+                    "offers": {
+                        "@type": "Offer",
+                        "priceCurrency": "IDR",
+                        "price": "60000",
+                        "itemCondition": "https://schema.org/NewCondition",
+                        "availability": "https://schema.org/InStock"
+                    }
+                },
+                {
+                    "@type": "Product",
+                    "name": "Kue Red Velvet",
+                    "image": "https://media.istockphoto.com/id/1316080097/id/foto/kue-red-velvet-dengan-blueberry-di-piring-putih-dengan-latar-belakang-hijau-tua.jpg?s=612x612&w=0&k=20&c=fp1AdL5Q6IpfaivodOUm8Yd5mWtTCOCU2Rgqj43--jA=",
+                    "description": "Kue Red Velvet yang manis dan cantik.",
+                    "offers": {
+                        "@type": "Offer",
+                        "priceCurrency": "IDR",
+                        "price": "70000",
+                        "itemCondition": "https://schema.org/NewCondition",
+                        "availability": "https://schema.org/InStock"
+                    }
+                }
+            ]
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ff8c00;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            animation: slideDown 1s ease-in-out;
+        }
+
+        .produk {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .item-produk {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .item-produk:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .item-produk img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+            transition: transform 0.3s;
+        }
+
+        .item-produk img:hover {
+            transform: scale(1.1);
+        }
+
+        .item-produk h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .item-produk p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .btn-beli {
+            background-color: #ff8c00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn-beli:hover {
+            background-color: #ff7a00;
+            transform: scale(1.05);
+        }
+
+        .keranjang {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff8c00;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.5em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: bounce 2s infinite;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Keyframes untuk animasi */
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di Toko Kue Raka</h1>
+    </header>
+    <main>
+        <section class="produk">
+            <h2>Daftar Produk Kue</h2>
+            <div class="item-produk">
+                <img src="https://media.istockphoto.com/id/1326149453/id/foto/irisan-kue-cokelat-hitam.jpg?s=612x612&w=0&k=20&c=XoIR1UiGfjB7Z6YJFFhe063nGg9YoaWLCCSqHQoSwB4=" alt="Kue Coklat">
+                <h3>Kue Coklat</h3>
+                <p>Harga: Rp 50.000</p>
+                <button class="btn-beli" onclick="tambahKeKeranjang('Kue Coklat', 50000)">Beli</button>
+            </div>
+            <div class="item-produk">
+                <img src="https://media.istockphoto.com/id/1364933651/id/foto/cheesecake-klasik.jpg?s=612x612&w=0&k=20&c=_kEGihrxC3MflUyMSty4UkglJhEABxpiwvMt10m3-cQ=" alt="Kue Keju">
+                <h3>Kue Keju</h3>
+                <p>Harga: Rp 60.000</p>
+                <button class="btn-beli" onclick="tambahKeKeranjang('Kue Keju', 60000)">Beli</button>
+            </div>
+            <div class="item-produk">
+                <img src="https://media.istockphoto.com/id/1316080097/id/foto/kue-red-velvet-dengan-blueberry-di-piring-putih-dengan-latar-belakang-hijau-tua.jpg?s=612x612&w=0&k=20&c=fp1AdL5Q6IpfaivodOUm8Yd5mWtTCOCU2Rgqj43--jA=" alt="Kue Red Velvet">
+                <h3>Kue Red Velvet</h3>
+                <p>Harga: Rp 70.000</p>
+                <button class="btn-beli" onclick="tambahKeKeranjang('Kue Red Velvet', 70000)">Beli</button>
+            </div>
+            <!-- Tambahkan produk lainnya di sini -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Toko Kue Raka.</p>
+    </footer>
+    <div class="keranjang" onclick="lihatKeranjang()" aria-label="Lihat keranjang belanja">
+        🛒
+    </div>    
+    <button class="btn-beli" onclick="hitungTotalHarga()">Total Harga</button>
+    <button class="btn-beli" onclick="hapusKeranjang()">Kosongkan Keranjang</button>
+    
+    <script>
+        let keranjang = [];
+    
+        function tambahKeKeranjang(namaProduk, harga) {
+            keranjang.push({ nama: namaProduk, harga: harga });
+            alert(namaProduk + " telah ditambahkan ke keranjang!");
+        }
+    
+        function lihatKeranjang() {
+            if (keranjang.length > 0) {
+                let daftarKeranjang = keranjang.map(item => `${item.nama} - Rp ${item.harga}`).join('\n');
+                alert("Keranjang Belanja:\n" + daftarKeranjang);
+            } else {
+                alert("Keranjang belanja Anda kosong.");
+            }
+        }
+    
+        function hitungTotalHarga() {
+            if (keranjang.length > 0) {
+                let totalHarga = keranjang.reduce((total, item) => total + item.harga, 0);
+                alert("Total Harga: Rp " + totalHarga);
+            } else {
+                alert("Keranjang belanja Anda kosong.");
+            }
+        }
+    
+        function hapusKeranjang() {
+            if (keranjang.length > 0) {
+                if (confirm("Apakah Anda yakin ingin mengosongkan keranjang?")) {
+                    keranjang = [];
+                    alert("Keranjang belanja Anda telah dikosongkan.");
+                }
+            } else {
+                alert("Keranjang belanja Anda sudah kosong.");
+            }
+        }
+    </script>
+</body>
+</html>
